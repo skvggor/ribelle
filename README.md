@@ -1,7 +1,6 @@
 # Ribelle
 
-Back up audio CDs as lossless FLAC files with metadata from MusicBrainz. Ribelle is released
-under the GNU General Public License, version 3.
+Back up audio CDs as lossless FLAC files with metadata from MusicBrainz.
 
 ## Requirements
 
@@ -57,3 +56,7 @@ with pinned container digests. Set `SONAR_KEEP_ALIVE=1` to leave the server avai
 
 Network and system-tool boundaries are replaced with typed fakes in unit tests, so the
 test suite does not need an internet connection or a CD drive.
+
+## License
+
+Ribelle is distributed under the GNU General Public License, version 3. See [LICENSE](LICENSE).
