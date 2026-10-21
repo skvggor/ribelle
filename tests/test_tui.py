@@ -135,8 +135,14 @@ async def test_tui_automatically_rips_a_single_matching_release(tmp_path: Path) 
         assert catalog.searches == [("Artist", "Album")]
         assert ripper.rips == [(album, "/dev/sr0", tmp_path, 1)]
         assert "complete" in static_text(app, "#status").lower()
-        assert app.query_one("#rip-progress", ProgressBar).progress == 1
-        assert app.query_one("#rip-progress Bar").size.width > 32
+        progress_widget = app.query_one("#rip-progress", ProgressBar)
+        assert progress_widget.progress == 1
+        bar_widget = app.query_one("#rip-progress Bar")
+        percentage_widget = app.query_one("#rip-progress PercentageStatus")
+        assert bar_widget.outer_size.height == 3
+        assert (
+            bar_widget.outer_size.width + percentage_widget.size.width == progress_widget.size.width
+        )
 
 
 @pytest.mark.asyncio
