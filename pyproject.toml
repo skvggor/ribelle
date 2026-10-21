@@ -1,0 +1,48 @@
+[project]
+name = "ribelle"
+version = "0.1.0"
+description = "Rip audio CDs to tagged FLAC files"
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = [
+    "mutagen>=1.48.1",
+    "textual>=8.2.8",
+]
+
+[project.scripts]
+ribelle = "ribelle.cli:main"
+sonar = "ribelle.sonar_scan:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "--cov=ribelle --cov-branch --cov-report=term-missing --cov-fail-under=80"
+
+[tool.coverage.run]
+relative_files = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[build-system]
+requires = ["uv_build==0.13.4"]
+build-backend = "uv_build"
+
+[tool.uv]
+required-version = ">=0.13.4,<0.14.0"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.1",
+    "ty>=0.0.90",
+    "uv-build==0.13.4",
+]

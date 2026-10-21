@@ -1,0 +1,110 @@
+Screen {
+    align: center middle;
+}
+
+#main-scroll {
+    width: 100%;
+    height: 1fr;
+    overflow-y: auto;
+}
+
+#main-panel {
+    width: 100%;
+    max-width: 88;
+    height: auto;
+    padding: 1 2;
+}
+
+#app-title {
+    height: 2;
+    text-style: bold;
+    color: $primary;
+    content-align: left middle;
+}
+
+#app-description {
+    height: 2;
+    color: $text-muted;
+}
+
+#search-panel,
+#release-panel,
+#progress-panel {
+    height: auto;
+    padding: 1 2;
+    margin: 1 0;
+    border: round $primary;
+}
+
+#search-panel .field-row {
+    layout: horizontal;
+    height: 3;
+}
+
+#search-panel Input,
+#search-panel Select {
+    width: 1fr;
+    margin: 0 1 0 0;
+}
+
+#search-button,
+#rip-button {
+    width: 100%;
+    margin-top: 1;
+}
+
+#status {
+    min-height: 2;
+    height: auto;
+    padding: 0 1;
+    content-align: left middle;
+}
+
+#loading-indicator {
+    height: 1;
+    width: 100%;
+    content-align: center middle;
+}
+
+#release-heading,
+#progress-heading {
+    height: 1;
+    margin-bottom: 1;
+    text-style: bold;
+}
+
+#release-options {
+    height: 7;
+    min-height: 3;
+    margin-bottom: 1;
+}
+
+#rip-progress {
+    margin: 1 0;
+}
+
+#destination-status {
+    height: auto;
+    color: $text-muted;
+}
+
+Screen.-narrow #main-panel {
+    padding: 1;
+}
+
+Screen.-narrow #search-panel,
+Screen.-narrow #release-panel,
+Screen.-narrow #progress-panel {
+    padding: 1;
+}
+
+Screen.-narrow #search-panel .field-row {
+    layout: vertical;
+    height: auto;
+}
+
+Screen.-narrow #search-panel Input,
+Screen.-narrow #search-panel Select {
+    width: 100%;
+    margin: 0 0 1 0;
+}
