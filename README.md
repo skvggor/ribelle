@@ -27,6 +27,10 @@ theme, and `--reduced-motion` disables animated loading indicators. MusicBrainz 
 are retried with the server's `Retry-After` delay. Set `RIBELLE_REDUCED_MOTION=1` to keep
 loading feedback static by default.
 
+## Screenshot
+
+![Ribelle ripping an audio CD](docs/images/ribelle-rip-progress.png)
+
 ## Development
 
 ```sh
