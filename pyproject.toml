@@ -31,7 +31,7 @@ target-version = "py312"
 select = ["E", "F", "I", "UP", "B"]
 
 [build-system]
-requires = ["uv_build==0.13.4"]
+requires = ["uv_build==0.13.5"]
 build-backend = "uv_build"
 
 [tool.uv]
@@ -44,5 +44,5 @@ dev = [
     "pytest-cov>=7.1.0",
     "ruff>=0.17.1",
     "ty>=0.0.90",
-    "uv-build==0.13.4",
+    "uv-build==0.13.5",
 ]
